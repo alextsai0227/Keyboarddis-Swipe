@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="textFieldKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qs8-fS-jrl">
+                                <rect key="frame" x="252" y="116" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Vk-8B-Q2o"/>
+                                    <constraint firstAttribute="width" constant="97" id="IgZ-3A-N7I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rr6-mI-xSA">
+                                <rect key="frame" x="50" y="181" width="500" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="BWQ-f7-lcH"/>
+                                    <constraint firstAttribute="width" constant="240" id="IEB-vq-WYp"/>
+                                    <constraint firstAttribute="height" constant="128" id="ZBo-P1-oIo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IEB-vq-WYp"/>
+                                        <exclude reference="ZBo-P1-oIo"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qs8-fS-jrl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N0V-ET-7pq"/>
+                            <constraint firstItem="Rr6-mI-xSA" firstAttribute="top" secondItem="qs8-fS-jrl" secondAttribute="bottom" constant="35" id="XWb-G7-DVd"/>
+                            <constraint firstItem="qs8-fS-jrl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-169" id="bAX-So-n9E"/>
+                            <constraint firstItem="Rr6-mI-xSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="lhd-YK-b3O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rr6-mI-xSA" secondAttribute="trailing" constant="30" id="s5P-Bu-l3Z"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xzH-OZ-gh1" appends="YES" id="p17-E1-sAJ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageview" destination="Rr6-mI-xSA" id="n27-xF-ob9"/>
+                        <outlet property="textField" destination="bAX-So-n9E" id="8Jd-6t-dc4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xzH-OZ-gh1">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="p3n-Qh-eH0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
